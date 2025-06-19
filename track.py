@@ -16,7 +16,7 @@ import platform
 import shutil
 import time
 import sys
-sys.path.insert(0, '/home/liuhaoan/deepsort-inhanced/boxmot-3.0/BPJDet_BPJDetPlus')
+sys.path.insert(0, '/home/liuhaoan/ADTS/Ori-YOLO-main')
 from BPJDet_BPJDetPlus.utils.torch_utils import select_device, time_sync
 from BPJDet_BPJDetPlus.utils.general import check_img_size, scale_coords, non_max_suppression, check_imshow
 from BPJDet_BPJDetPlus.utils.datasets import LoadImages, LoadStreams
@@ -99,9 +99,9 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
 
     # video options
-    parser.add_argument('-p', '--video-path', default='/home/liuhaoan/deepsort-inhanced/boxmot-3.0/BPJDet_BPJDetPlus/test_imgs/test_video_23.mp4', help='path to video file')
+    parser.add_argument('-p', '--video-path', default='/home/liuhaoan/ADTS/Ori-YOLO-main/test_imgs/test_video_23.mp4', help='path to video file')
 
-    parser.add_argument('--data', type=str, default='/home/liuhaoan/deepsort-inhanced/boxmot-3.0/BPJDet_BPJDetPlus/data/JointBP_HumanParts.yaml')
+    parser.add_argument('--data', type=str, default='/home/liuhaoan/ADTS/Ori-YOLO-main/data/JointBP_HumanParts.yaml')
     parser.add_argument('--imgsz', type=int, default=1024)  # 128*8
     parser.add_argument('--save-size', type=int, default=960)
     parser.add_argument('--weights', default='/home/liuhaoan/deepsort-inhanced/boxmot-3.0/BPJDet_BPJDetPlus/runs/train/exp9/best_mMR_0328.pt')
@@ -124,8 +124,8 @@ if __name__ == '__main__':
 
     # DeepSORT related parametersL
     parser.add_argument('--save-vid', action='store_true', help='save video tracking results')
-    parser.add_argument('--deep-sort-weights', type=str, default='/home/liuhaoan/deepsort-inhanced/boxmot-3.0/deep_sort_pytorch/deep_sort/deep/checkpoint/exp12_best/checkpoint/ckpt.t7', help='DeepSORT model weights')
-    parser.add_argument('--config-deepsort', type=str, default='/home/liuhaoan/deepsort-inhanced/boxmot-3.0/deep_sort_pytorch/configs/deep_sort.yaml', help='DeepSORT config file')
+    parser.add_argument('--deep-sort-weights', type=str, default='/home/liuhaoan/ADTS/AstroSORT-main/deep/checkpoint/exp12_best/checkpoint/ckpt.t7', help='DeepSORT model weights')
+    parser.add_argument('--config-deepsort', type=str, default='/home/liuhaoan/ADTS/AstroSORT-main/configs/deep_sort.yaml', help='DeepSORT config file')
     parser.add_argument('--save-txt', action='store_true', help='save MOT compliant results to *.txt')
     parser.add_argument('--output', type=str, default='inference/output', help='output folder for tracking results')
     
