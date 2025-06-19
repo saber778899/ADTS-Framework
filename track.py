@@ -104,7 +104,7 @@ if __name__ == '__main__':
     parser.add_argument('--data', type=str, default='/home/liuhaoan/ADTS/Ori-YOLO-main/data/JointBP_HumanParts.yaml')
     parser.add_argument('--imgsz', type=int, default=1024)  # 128*8
     parser.add_argument('--save-size', type=int, default=960)
-    parser.add_argument('--weights', default='/home/liuhaoan/deepsort-inhanced/boxmot-3.0/BPJDet_BPJDetPlus/runs/train/exp9/best_mMR_0328.pt')
+    parser.add_argument('--weights', default='/home/liuhaoan/ADTS/Ori-YOLO-main/runs/train/exp9/best_mMR_0328.pt')
     parser.add_argument('--device', default='3', help='cuda device, i.e. 0 or cpu')
     parser.add_argument('--conf-thres', type=float, default=0.3, help='confidence threshold')
     parser.add_argument('--iou-thres', type=float, default=0.7, help='NMS IoU threshold')
@@ -124,8 +124,8 @@ if __name__ == '__main__':
 
     # DeepSORT related parametersL
     parser.add_argument('--save-vid', action='store_true', help='save video tracking results')
-    parser.add_argument('--deep-sort-weights', type=str, default='/home/liuhaoan/ADTS/AstroSORT-main/deep/checkpoint/exp12_best/checkpoint/ckpt.t7', help='DeepSORT model weights')
-    parser.add_argument('--config-deepsort', type=str, default='/home/liuhaoan/ADTS/AstroSORT-main/configs/deep_sort.yaml', help='DeepSORT config file')
+    parser.add_argument('--deep-sort-weights', type=str, default='/home/liuhaoan/ADTS/AstroSORT-main/deep/checkpoint/exp12_best/checkpoint/ckpt.t7', help='AstroSORT model weights')
+    parser.add_argument('--config-deepsort', type=str, default='/home/liuhaoan/ADTS/AstroSORT-main/configs/deep_sort.yaml', help='AstroSORT config file')
     parser.add_argument('--save-txt', action='store_true', help='save MOT compliant results to *.txt')
     parser.add_argument('--output', type=str, default='inference/output', help='output folder for tracking results')
     
