@@ -17,16 +17,16 @@ import shutil
 import time
 import sys
 sys.path.insert(0, '/home/liuhaoan/ADTS/Ori-YOLO-main')
-from BPJDet_BPJDetPlus.utils.torch_utils import select_device, time_sync
-from BPJDet_BPJDetPlus.utils.general import check_img_size, scale_coords, non_max_suppression, check_imshow
-from BPJDet_BPJDetPlus.utils.datasets import LoadImages, LoadStreams
-from BPJDet_BPJDetPlus.models.experimental import attempt_load
+from Ori-YOLO-main.utils.torch_utils import select_device, time_sync
+from Ori-YOLO-main.utils.general import check_img_size, scale_coords, non_max_suppression, check_imshow
+from Ori-YOLO-main.utils.datasets import LoadImages, LoadStreams
+from Ori-YOLO-main.models.experimental import attempt_load
 
-from BPJDet_BPJDetPlus.val import post_process_batch
+from Ori-YOLO-main.val import post_process_batch
 
-# DeepSORT related modules
-from deep_sort_pytorch.utils.parser import get_config
-from deep_sort_pytorch.deep_sort import DeepSort
+# AstroSORT related modules
+from AstroSORT-main.utils.parser import get_config
+from AstroSORT-main.deep_sort import DeepSort
 
 colors_list = [
         [255, 127, 0], [127, 255, 0], [0, 255, 127], [0, 127, 255], [127, 0, 255], [255, 0, 127],
